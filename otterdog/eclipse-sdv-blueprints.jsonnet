@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-sdv-blueprints') {
+orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
   settings+: {
     description: "",
     name: "Eclipse SDV Blueprints",
