@@ -66,6 +66,28 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('commercial-sdv-stack') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "This blueprint is to become an engagement opportunity for identifying, aligning on and collaboratively implementing Commercial-Vehicle driven use cases",
+      homepage: "",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('e2e-vehicle-signals') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "This is a blueprint for an end-to-end Software Defined Vehicle flow that connects in-vehicle edge devices to fleet backend services using open Eclipse SDV components",
+      homepage: "",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('service-to-signal') {
       allow_merge_commit: true,
       allow_update_branch: false,
