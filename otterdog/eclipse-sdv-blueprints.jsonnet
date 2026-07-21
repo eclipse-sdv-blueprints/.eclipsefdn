@@ -88,6 +88,17 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('carmate') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "This blueprint demonstrates an end-to-end Software Defined Vehicle (SDV) architecture for an AI-powered in-vehicle companion, named CarMate, that enhances driver well-being, safety, and interaction.",
+      homepage: "",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('service-to-signal') {
       allow_merge_commit: true,
       allow_update_branch: false,
