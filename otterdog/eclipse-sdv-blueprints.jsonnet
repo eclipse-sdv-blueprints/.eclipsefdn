@@ -1,5 +1,18 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
+local default_branch_protection = {
+  enforce_admins: true,
+  required_pull_request_reviews: {
+    dismiss_stale_reviews: true,
+    require_code_owner_reviews: false,
+    required_approving_review_count: 1,
+  },
+  required_status_checks: [],
+  required_conversation_resolution: true,
+  allow_force_pushes: false,
+  allow_deletions: false,
+};
+
 orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
   settings+: {
     description: "",
@@ -18,6 +31,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "SDV-Blueprints .github",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -28,6 +42,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       delete_branch_on_merge: false,
       description: "Blueprints project management",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -42,6 +57,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       gh_pages_source_path: "/",
       homepage: "https://sdv-blueprints.eclipse.dev",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -62,6 +78,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "The companion application is an example to showcase how to create a vehicle application which senses and actuates signals in the vehicle for Eclipse Leda with help of Eclipse Velocitas and Eclipse Kuksa",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -73,6 +90,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "This blueprint is to become an engagement opportunity for identifying, aligning on and collaboratively implementing Commercial-Vehicle driven use cases",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -84,6 +102,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "This is a blueprint for an end-to-end Software Defined Vehicle flow that connects in-vehicle edge devices to fleet backend services using open Eclipse SDV components",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -95,6 +114,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "This blueprint demonstrates an end-to-end Software Defined Vehicle (SDV) architecture for an AI-powered in-vehicle companion, named CarMate, that enhances driver well-being, safety, and interaction.",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -106,6 +126,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "Orchestrates whole vehicle scenarios across multiple nodes with Pullpiri, Timpani and Kuksa, driven by VSS signals. A hardware demo shows time-triggered workloads keeping deterministic timing under CPU load where conventional workloads drift.",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -117,6 +138,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "The service-to-signal blueprint is an example to showcase how to use the Eclipse uProtocol (https://github.com/eclipse-uprotocol) to make a vehicle service available in a vehicle network and connect the service implementation with potential physical hardware",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -128,6 +150,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "A close to real-life showcase for truck fleet management where trucks run an SDV software stack so that logistics fleet operators can manage apps, data and services for a diverse set of vehicles.",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -139,6 +162,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "A showcase for integrating Eclipse Software Defined Vehicle (SDV) and Eclipse Dataspaces for insurance applications. Enable exchange of vehicle and risk events to support risk assessment, underwriting processes and customer experiences",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -150,6 +174,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       description: "Take ROS, F1Tenth and a race track and see where it all gets you!",
       homepage: "",
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
@@ -159,6 +184,7 @@ orgs.newOrg('automotive.sdv-blueprints', 'eclipse-sdv-blueprints') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       web_commit_signoff_required: false,
+      branch_protection+: default_branch_protection,
       workflows+: {
         default_workflow_permissions: "write",
       },
